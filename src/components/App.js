@@ -11,13 +11,13 @@ const App = () => {
 
         //define myCanvas
         const myCanvas = canvasRef.current; // same as getElementByID
-        myCanvas.width = window.innerWidth - 100
+        myCanvas.width = window.innerWidth - 50
         myCanvas.height = window.innerHeight;
 
         const context = myCanvas.getContext("2d")
         
         context.scale(1,1)
-        context.lineWidth = 7;
+        context.lineWidth = 3;
         context.lineCap = 'round'
         context.strokeStyle = 'black'
         
