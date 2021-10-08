@@ -17,7 +17,7 @@ const App = () => {
         const context = myCanvas.getContext("2d")
         
         context.scale(1,1)
-        context.lineWidth = 3;
+        context.lineWidth = 10;
         context.lineCap = 'round'
         context.strokeStyle = 'black'
         
