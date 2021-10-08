@@ -7,12 +7,6 @@ const App = () => {
 
     let isDrawing = false;
 
-    //startDrawing
-
-    //endDrawing
-
-    //draw
-
     useEffect( () => {
 
         //define myCanvas
@@ -26,6 +20,7 @@ const App = () => {
         context.lineWidth = 7;
         context.lineCap = 'round'
         context.strokeStyle = 'black'
+        
         //preserve the context b/w render, to use in drawing functions
         contextRef.current = context
         
@@ -39,14 +34,11 @@ const App = () => {
     //to get coordinates of mouse -> event.clientX, .clientY
     const startDrawing = (event) => {
         isDrawing = true;
-        console.log('mouse down')
-    
+
         contextRef.current.beginPath();
-        
     }
 
     const endDrawing = () => {
-        console.log('mouse up')
         isDrawing = false
     }
 
@@ -58,8 +50,7 @@ const App = () => {
         contextRef.current.moveTo(event.clientX, event.clientY)
         contextRef.current.lineTo(event.clientX, event.clientY)
         contextRef.current.stroke()
-        //context.moveTo(x, y)
-
+        //go to 0,0 -> make a point -> stroke visualises it, and points eventually makes a line
     }
 
     return(
